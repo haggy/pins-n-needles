@@ -110,4 +110,23 @@ P 1 1000
 ```
 This will enable the LED, wait 1 second, then set the pin state back to LOW.
 
+## Looping your script file
+What if I wanted my LED to blink many times? Sure I could just copy-paste the pulse command 100's or thousands of times
+but that's tedious and very hard to maintain. Instead, we can just set the `loopCount` argument when we run our script!
 
+Let's flash that LED 1000 times without modifying the script file:
+```bash
+java -jar pinsinneedles-<VERSION>.jar --cmdFile /path/to/flashing-lights.txt --loopCount 1000
+```
+That's it! Things get really interesting when you have more complicated scripts (like the `shake-dem-hips` script above).
+
+## What pin numbers do I use?
+When you pass commands such as `H 2 1000` to set the #2 pin to high, that is taken straight from the WiringPi pinout for
+Raspberry Pi 3 B+ found [here](http://pi4j.com/pins/model-3b-plus-rev1.html). The commands should use numbers 1-31.
+
+## What's next?
+
+* Improve command parsing code (it's ugly and tough to extend and test in it's current implementation)
+* Support for pin numbers instead of just ID's
+* (Maybe) Support for variables in scripts so you could assign pin numbers to human-friendly names (like `SRCLK=2`)
+* Anything else people might think of.
