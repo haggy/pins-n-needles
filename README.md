@@ -127,6 +127,7 @@ Raspberry Pi 3 B+ found [here](http://pi4j.com/pins/model-3b-plus-rev1.html). Th
 ## What's next?
 
 * Improve command parsing code (it's ugly and tough to extend and test in it's current implementation)
+* Better error handling all around (Im a scala guy so throwing exceptions kills me)
 * Support for pin numbers instead of just ID's
 * (Maybe) Support for variables in scripts so you could assign pin numbers to human-friendly names (like `SRCLK=2`)
 * Anything else people might think of.
