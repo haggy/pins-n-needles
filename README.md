@@ -1,3 +1,5 @@
+![PNN Logo](docs/images/pins-n-needles.png?raw=true "PNN Logo")
+
 # Pins and Needles
 `Pins and Needles` is a small interpreter and command-runner that allows you to quickly script digital signal flows on the
 raspberry pi. In other words, you write lines consisting of simple commands that control pins on the Pi without having
